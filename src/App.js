@@ -2,7 +2,7 @@ import { useState } from "react";
 import AddFruitForm from "components/AddFruitForm";
 import Button from "components/Button";
 import Filter from "components/Filter";
-import Fruit from "components/Fruit";
+import FruitList from "components/FruitList";
 
 function App() {
   const [fruits, setFruits] = useState(["Banana", "Apple"]);
@@ -62,9 +62,7 @@ function App() {
       <Button text={reverseOrder ? "Reverse" : "Order"} onClick={toggleOrder} />
       <br />
       <br />
-      {filteredFruits.map((fruit, index) => (
-        <Fruit key={index} name={fruit} handleRemoveFruit={removeFruit} />
-      ))}
+      <FruitList fruits={filteredFruits} removeFruit={removeFruit} />
       <br />
       <AddFruitForm
         key={addFruitFormKey}

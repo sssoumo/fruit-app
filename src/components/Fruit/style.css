@@ -1,3 +1,10 @@
+.fruit {
+  height: 30px;
+}
 .fruit > * {
   display: inline-block;
+}
+
+.fruit > button {
+  margin-left: 10px;
 }
